@@ -34,7 +34,7 @@ jobs:
       - name: Configure GitHub Pages path
         run: |
           sed -i "/export default defineConfig({/a\\  base: '/nitidoc/'," vite.config.ts
-          sed -i "s|/opencv/opencv.js|/nitidoc/opencv/opencv.js|g" src/features/scanner/worker/opencv.worker.ts
+          sed -i "s|/opencv/opencv.js|/nitidoc/opencv/opencv.js|g" src/features/scanner/lib/opencvLoader.ts
 
       - name: Build
         run: npm run build
